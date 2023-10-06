@@ -26,7 +26,7 @@ echo "server {
 	location /redirect_me {
 		return 301 https://www.youtube.com/watch?v=DHITmcKUGik;
 	}
-	location /hbnb_static {
+	location /hbnb_static/ {
 		alias /data/web_static/current;
 	}
 	error_page 404 /404.html;
