@@ -38,3 +38,5 @@ echo "server {
 	
 
 sudo service nginx restart
+
+exit 0
