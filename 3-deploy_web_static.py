@@ -17,7 +17,7 @@ def do_pack():
         return None
     else:
         print(res)
-        return res
+        return f"versions/web_static_{current_time}.tgz"
 
 
 def do_deploy(archive_path):
