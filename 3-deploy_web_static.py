@@ -16,7 +16,6 @@ def do_pack():
     if res.failed:
         return None
     else:
-        print(res)
         return f"versions/web_static_{current_time}.tgz"
 
 
@@ -37,11 +36,8 @@ def do_deploy(archive_path):
         run("sudo rm -rf /data/web_static/current")
         run(f"sudo ln -s {target_dir_name} /data/web_static/current")
         return True
-    except Exception as e:
-        if e:
-            return False
-        else:
-            return False
+    except Exception:
+        return False
 
 
 def deploy():
