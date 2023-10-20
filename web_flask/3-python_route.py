@@ -29,5 +29,11 @@ def namepython(text):
     return f"Python {text.replace('_', ' ')}"
 
 
+@app.route("/python", strict_slashes=False)
+def namepython2():
+    """print hello hbnb"""
+    return "Python is cool"
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
